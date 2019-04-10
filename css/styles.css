@@ -216,7 +216,6 @@ p {
 
 
 .button {
-	/* height: 74px; */
 	display: inline;
 	/* width: 260px; */
 	border: #dbdbdb 2px solid;
@@ -275,6 +274,8 @@ p.why-give {
 	margin:auto;
 }
 
+
+/* ++++++++++++++  breakpoint styles ++++++++++++++++++++ */
 
 
 
