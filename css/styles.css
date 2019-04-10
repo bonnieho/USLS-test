@@ -1,0 +1,276 @@
+/* Styles for CSS Test Page for U.S. Law Shield
+
+Author: Bonnie L. Hoffman (bonnieho@rice.edu)
+
+Order of load for style sheets:
+
+1. reset.css (meyerweb reset stylesheet (author Eric Meyer) - this zeros out all default browser styles so that ours are actually what styles the content)
+
+2. style.css (THIS document - all custom styles)
+
+*/
+
+/* Housekeeping... */
+/* recommended to improve accessibility across browsers */
+@-ms-viewport{ width: device-width; }
+
+
+/* The following styles are homegrown; intended to provide my own customization. */
+
+/* media="all" styles below */
+
+
+* {
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	position: relative;
+	min-height: 100%;
+} 
+
+body {
+	min-height: 100%; 
+	margin: 0 0 0 0;
+	
+	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Oxygen', sans-serif;
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+	font-family: Menlo,Monaco,Consolas,'Courier New',monospace;
+	font-family: 'rooney-sans', Avenir-Book, Calibri, 'Fira Sans', sans-serif;
+
+	font-size: 28px;
+	line-height: 150%;
+	/* here's a setting to help older browsers support oldstyle nums */
+	font-feature-settings: "onum" 1;
+	/* this pulls the lowercase number glyphs out of the font's set */
+	font-variant-numeric: oldstyle-nums;
+	font-weight: lighter;
+	font-stretch: expanded;
+	letter-spacing: 1.2px; /* give this an em value somewhere between 1 and 2 px */
+	/* color: #828282; */
+	color: #9c9c9c;
+	/* background-color: #fff; */
+	background-color: #212121;
+}
+
+/* this sniffs for older browser non-support of oldstyle nums */
+@supports (font-variant-numeric: oldstyle-nums) {
+    body {
+        font-feature-settings: normal;
+        font-variant-numeric: oldstyle-nums;
+    }
+}
+
+/* SAVE FOR LINKS
+
+a:link {
+	text-decoration: none;
+	color: #999;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #999;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #666;
+	border-bottom: #666 dotted 1px;
+}
+
+a:active {
+	text-decoration: none;
+	color: #eee;
+	border-bottom: #eee dotted 1px;
+} */
+
+/* =====================  START SECTION STYLES ==================== */
+
+
+#main {
+
+	margin:auto;
+	max-width: 700px;
+	background-color: #fff;
+	/* padding: 36px 46px; */
+	margin-bottom: 12px;
+	padding-top: 36px;
+	margin-top: 12px;
+}
+
+/* inactive popover - created for the effect */
+#popover {
+	position: relative;
+	max-width: 548px;
+	margin: auto;
+	border: #424242 2px solid;
+	border-radius: 8px;
+ 	background-color: #424242 !important;
+	padding: 24px;
+ 	text-align: center;
+	color: #fff;
+	font-size: 30px;
+}
+
+.popover-arrow {
+	position: absolute;
+	top: 92px;
+	left: 506px;
+	border-top: 16px solid #424242;
+	border-left: 12px solid transparent;
+	border-right: 12px solid transparent;
+ 	width: 0;
+ 	height: 0;
+ 	/* -webkit-filter: drop-shadow(0 -2px 2px #AAA); */
+}
+
+
+#progress-bar {
+	max-width: 600px;
+	border: #dadada 2px solid;
+	border-bottom: 0;
+	margin: auto;
+	margin-top: 24px;
+}
+
+.progress-fill {
+	height:24px;
+	width:74.7%;
+	background-color: #f35d3f;
+}
+
+#inner-content {
+	max-width: 508px;
+	border: #dadada 2px solid;
+	padding: 0 46px 36px 46px;
+	margin: 0 auto;
+}
+
+.notshowing {
+	display: none;
+}
+
+p {
+	margin: 24px 0;
+}
+
+/* text-shadow: 0 1px 1px rgba(0,0,0,0.1) */
+
+#button-group_01 {
+	width: 100%;
+	text-align: center;
+	display: block;
+	/* margin: 32px 46px 18px 46px; */
+	margin-top: 32px
+	margin: auto;
+}
+
+#button-group-02 {
+	width: 100%;
+	text-align: center;
+	display: block;
+	margin: auto;
+	padding-top: 28px;
+	padding-bottom: 32px;
+}
+
+
+.button1 {
+	/* height: 74px; */
+	display: inline;
+	width: 260px;
+	border: #dbdbdb 2px solid;
+	border-radius: 8px;
+	background-color: #fff;
+	padding: 28px;
+	font-size: 30px;
+	font-weight: bold;
+	color: #818181;
+}
+
+.button1-grn {
+	/* height: 74px; */
+	display: inline;
+	width: 260px;
+	border: #00b03f 2px solid;
+	border-radius: 8px;
+	background-color: #00bc43;
+	padding: 28px;
+	font-size: 30px;
+	font-weight: bold;
+	color: #fff;
+}
+
+.button {
+	/* height: 74px; */
+	display: inline;
+	/* width: 260px; */
+	border: #dbdbdb 2px solid;
+	border-radius: 8px;
+	background-color: #fff;
+	padding: 28px;
+	font-size: 30px;
+	font-weight: bold;
+	color: #818181;
+}
+
+.bolder {
+	font-weight: bold;
+}
+
+p.why-give {
+	font-style: italic;
+	color: #00a2d1;
+}
+
+.only-nudge {
+	color: #f35d3f;
+	font-weight: bold;
+}
+
+.amt-num {
+	font-weight: normal;
+	font-family: 'rooney-sans', Avenir-Book, Calibri, sans-serif;
+	font-variant-numeric: oldstyle-nums;
+}
+
+.dollar-qty {
+	color: #424242;
+	font-weight: bold;
+	font-family: sans-serif;
+	font-variant-numeric: lining-nums;
+}
+
+/* this pulls the lowercase number glyphs out of the font's set */
+
+.nums {
+    font-feature-settings: frac;
+}
+
+@supports (font-variant-numeric: diagonal-fractions) {
+  .nums {
+      font-feature-settings: frac;
+      font-variant-numeric: diagonal-fractions;
+  }
+}
+
+
+#pic {
+	text-align: center;
+	margin:auto;
+}
+
+
+
+
+
+
+
+
+
+
+
