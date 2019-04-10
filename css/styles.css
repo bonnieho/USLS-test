@@ -277,6 +277,13 @@ p.why-give {
 
 /* ++++++++++++++  breakpoint styles ++++++++++++++++++++ */
 
+/* ==============   Custom Media Queries  ================  */
+
+
+/* Small ONLY */
+@media screen and (max-width: 39.9375em) {
+}
+
 
 
 
