@@ -51,8 +51,8 @@ body {
 	letter-spacing: 0.043em;
 	/* color: #828282; */
 	color: #9c9c9c;
-	/* background-color: #fff; */
-	background-color: #212121;
+	/* background-color: #212121; */
+	background-color: #f2f2f2;
 }
 
 /* this sniffs for older browser non-support of oldstyle nums */
@@ -92,68 +92,49 @@ a:active {
 
 
 #main {
-	/* max-width: 608px; */
 	max-width: 21.714em;
 	background-color: #fff;
-	/* padding: 36px 46px 4px 46px; */
 	padding: 1.286em 1.643em 0 1.643em;
 	margin: auto;
-	/* margin-top: 24px; */
 	margin-top: 0.857em;
-	/* margin-bottom: 12px; */
-	/* padding-top: 36px;
-	padding-bottom: 32px; */
+	border: #f2f2f2 1px solid;
 }
 
 
 /* inactive popover - created for the effect */
 #popover {
 	position: relative;
-	/* max-width: 548px; */
 	max-width: 19.571em;
 	margin: auto;
-	/* border: #424242 2px solid; */
 	border: #424242 0.071em solid;
-	/* border-radius: 6px; */
 	border-radius: 0.214em;
  	background-color: #424242 !important;
-	/* padding: 24px; */
 	padding: 0.857em;
  	text-align: center;
 	color: #fff;
-	/* font-size: 30px; */
 	font-size: 1.071em;
 }
 
 .popover-arrow {
 	position: absolute;
 	top: 92px; 
-	/* top: 3.286em; */
 	left: 506px; 
-	/* left: 18.071em; */
 	border-top: 22px solid #424242; 
-	/* border-top: 0.643em solid #424242; */
 	border-left: 16px solid transparent; 
-	/* border-left: 0.464em solid transparent; */
 	border-right: 16px solid transparent;
-	/* border-right: 0.464em solid transparent; */
  	width: 0;
  	height: 0;
  	/* -webkit-filter: drop-shadow(0 -2px 2px #AAA); */
 }
 
 #progress-bar {
-	/* max-width: 600px; */
 	max-width: 21.429em;
-	border: #dadada 2px solid;
-	border-bottom: 0;
-	margin: auto;
-	/* margin-top: 24px; */
-	margin-top: 0.857em;
+	border-bottom: #dadada 2px solid;
+	margin-right: -1.643em;
+	margin-left: -1.643em;
 }
 
 .progress-fill {
-	/* height: 24px; */
 	height: 0.857em;
 	width: 74.7%;
 	background-color: #f35d3f;
@@ -163,13 +144,11 @@ a:active {
 /*  this is the primary 'middle' section with the lt gray border */
 
 #inner-content {
-	/* max-width: 508px; */
 	max-width: 18.143em;
 	border: #dadada 2px solid; 
-	/* padding: 0 46px 10px 46px; */
 	padding: 0 1.643em 0.357em 1.643em;
 	margin: 0 auto;
-	/* margin-bottom: 10px; */
+	margin-top: 0.857em;
 	margin-bottom: 0.357em;
 	/* -webkit-filter: drop-shadow(0 -2px 2px #AAA); */
 	/* box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4); */
@@ -197,29 +176,23 @@ p {
 	height: 100%;
 	text-align: center;
 	display: block;
-	/* margin: 32px 46px 18px 46px; */
 	margin-top: 26px; 
-	/* margin-top: 0.929em; */
 	margin-left: 0;
 	padding-left: 0;
-	
 }
 
 .button1 {
 	display: inline-block;
 	width: 180px; 
 	border: #d9d9d9 2px solid;
-	/* border-radius: 8px; */
 	border-radius: 0.286em;
 	background-color: #fff;
 	padding: 28px; 
-	/* font-size: 34px; */
 	font-size: 1.214em;
 	font-weight: bold;
 	color: #818181;
 	text-align: left;
 	margin-right: 14px; 
-	/* margin-right: 0.5em; */
 	margin-left: -4px; 
 }
 
@@ -231,11 +204,9 @@ p {
 	border-radius: 0.286em;
 	background-color: #00bc43;
 	padding: 26px;
-	/* font-size: 34px; */
 	font-size: 1.214em;
 	font-weight: 600;
 	font-stretch: expanded;
-	/* letter-spacing: 1.2px; */
 	letter-spacing: 0.043em;
 	color: #fff;
 	margin-left: 14px;
@@ -379,19 +350,10 @@ p.why-give {
 	color: #424242;
 	font-weight: bold;
 	font-family: arial, helvetica, sans-serif;
-	font-variant-numeric: none;
+	font-variant-numeric: tabular-nums;
 	/* font-size: 36px; */
 	font-size: 1.071em;
 }
-
-
-
-
-#pic {
-	text-align: center;
-	margin:auto;
-}
-
 
 
 
@@ -399,98 +361,146 @@ p.why-give {
 
 
 /* Small ONLY */
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 320px) {
 
 	#main {
 		width: 100%;
-		max-width: 21.714em;
+		max-width: 320px;
+		padding: 1.286em 1.643em 0 1.643em;
+		margin: 1em;
 		margin-right: 0.5em;
 		margin-left: 0.5em;
 	}
 
-	#inner-content {
-		/* max-width: 508px; */
+	#progress-bar {
 		width: 100%;
-		max-width: 100%;
+		
+	}
+
+	.popover-arrow {
+		display: none;
+	}
+
+	#inner-content {
+		width: 100%;
+		max-width: 85%;
 		border: #dadada 2px solid; 
-		/* padding: 0 46px 10px 46px; */
-		padding: 0 1.643em 0.357em 1.643em;
 		margin: 0 auto;
-		/* margin-bottom: 10px; */
 		margin-bottom: 0.357em;
-		/* -webkit-filter: drop-shadow(0 -2px 2px #AAA); */
-		/* box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4); */
+	}
+
+
+	p.why-give {
+		text-align: center;
+		margin-top: 1em;
+	}
+
+	#button-group_01 {
+		width: 100%;
+		height: 100%;
+		margin-left: 0;
+		padding-left: 0;
+	}
+
+	.button1 {
+		display: inline-block;
+		width: 86%;
+		margin-right: 0; 
+		margin-bottom: 0.75em;
+		margin-left: 0; 
+	}
+
+	.button1-grn {
+		display: inline-block;
+		width: 86%;
+		margin-left: 0;
+		margin-right: 0;
 	}
 
 	#button-group-02 {
 		width: 100%;
+		max-width: 100%
 	}
 
 
 	.button-save {
 		display: inline-block;
 		width: 100%;
-		border: #d9d9d9 2px solid;
-		border-bottom: #d9d9d9 4px solid;
-		border-radius: 0.286em;
-		background-color: #fff;
-		padding: 16px 48px;
-		font-size: 1em;
-		font-weight: bold;
-		color: #818181;
-		max-width: 18.143em;
+		max-width: 85%;
 		margin-right: 0;
 		margin-bottom: 0.75em;
 	}
 
 	.button-tell {
-		display: inline-block;
 		width: 100%;
-		border: #d9d9d9 2px solid;
-		border-bottom: #d9d9d9 4px solid;
-		border-radius: 0.286em;
-		background-color: #fff;
-		padding: 16px 48px;
-		font-size: 1em;
-		font-weight: 600;
-		color: #818181;
-		max-width: 18.143em;
+		max-width: 92%;
 		margin-left: 0;
 	}
 }
 
 
 /* Medium ONLY */
-@media screen and (min-width: 680px) and (max-width: 764px) {
+@media screen and (min-width: 320px) and (max-width: 764px) {
+
+	#main {
+		max-width: 764px;
+		padding: 1.286em 1.643em 0 1.643em;
+		margin: 1em;
+	}
+
+	.popover-arrow {
+		display: none;
+	}
+
+	#inner-content {
+		max-width: 80%;
+	}
+
+	#button-group_01 {
+		height: 100%;
+		text-align: center;
+		display: block;
+		margin-top: 26px; 
+		margin-left: 0;
+		padding-left: 0;
+	}
+
+	.button1 {
+		display: inline-block;
+		width: 86%;
+		margin-right: 0;
+		margin-bottom: 0.75em;
+		margin-left: 0; 
+	}
+
+	.button1-grn {
+		display: inline-block;
+		width: 86%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	p.why-give {
+		text-align: center;
+		margin-top: 1em;
+	}
+
+	#button-group-02 {
+		width: 100%;
+		max-width: 100%
+	}
 
 	.button-save {
 		display: inline-block;
-		width: 100%;
-		border: #d9d9d9 2px solid;
-		border-bottom: #d9d9d9 4px solid;
-		border-radius: 0.286em;
-		background-color: #fff;
-		padding: 16px 48px;
-		font-size: 1em;
-		font-weight: bold;
-		color: #818181;
-		max-width: 18.143em;
+		width: 80%;
 		margin-right: 0;
 		margin-bottom: 0.75em;
 	}
 
 	.button-tell {
 		display: inline-block;
-		width: 100%;
-		border: #d9d9d9 2px solid;
-		border-bottom: #d9d9d9 4px solid;
-		border-radius: 0.286em;
-		background-color: #fff;
-		padding: 16px 48px;
-		font-size: 1em;
-		font-weight: 600;
-		color: #818181;
-		max-width: 18.143em;
+		width: 86%;
+		margin-right: 0;
 		margin-left: 0;
 	}
 
