@@ -34,7 +34,7 @@ html {
 body {
 	min-height: 100%; 
 	margin: 0 0 0 0;
-	
+	display: flex;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-family: 'Oxygen', sans-serif;
 	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
@@ -92,14 +92,14 @@ a:active {
 
 
 #main {
-
-	margin:auto;
 	max-width: 700px;
 	background-color: #fff;
-	/* padding: 36px 46px; */
-	margin-bottom: 12px;
-	padding-top: 36px;
-	margin-top: 12px;
+	padding: 36px 46px 4px 46px;
+	margin: auto;
+	margin-top: 24px;
+	/* margin-bottom: 12px; */
+	/* padding-top: 36px;
+	padding-bottom: 32px; */
 }
 
 /* inactive popover - created for the effect */
@@ -108,7 +108,7 @@ a:active {
 	max-width: 548px;
 	margin: auto;
 	border: #424242 2px solid;
-	border-radius: 8px;
+	border-radius: 6px;
  	background-color: #424242 !important;
 	padding: 24px;
  	text-align: center;
@@ -120,9 +120,9 @@ a:active {
 	position: absolute;
 	top: 92px;
 	left: 506px;
-	border-top: 16px solid #424242;
-	border-left: 12px solid transparent;
-	border-right: 12px solid transparent;
+	border-top: 18px solid #424242;
+	border-left: 13px solid transparent;
+	border-right: 13px solid transparent;
  	width: 0;
  	height: 0;
  	/* -webkit-filter: drop-shadow(0 -2px 2px #AAA); */
@@ -145,9 +145,13 @@ a:active {
 
 #inner-content {
 	max-width: 508px;
-	border: #dadada 2px solid;
-	padding: 0 46px 36px 46px;
+	/* border: #dadada 2px solid; */
+	border: #d9d9d9 2px solid;
+	padding: 0 46px 10px 46px;
 	margin: 0 auto;
+	margin-bottom: 10px;
+	/* -webkit-filter: drop-shadow(0 -2px 2px #AAA); */
+	/* box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4); */
 }
 
 .notshowing {
@@ -176,7 +180,7 @@ p {
 .button1 {
 	display: inline-block;
 	width: 180px;
-	border: #dbdbdb 2px solid;
+	border: #d9d9d9 2px solid;
 	border-radius: 8px;
 	background-color: #fff;
 	padding: 28px;
@@ -206,24 +210,43 @@ p {
 }
 
 #button-group-02 {
-	width: 100%;
+	width: 604px;
 	text-align: center;
 	display: block;
 	margin: auto;
-	padding-top: 28px;
+	margin-left: 0;
+	padding-top: 16px;
 	padding-bottom: 32px;
+	padding-left: 0;
+	justify-content: left;
 }
 
 
-.button {
-	display: inline;
-	/* width: 260px; */
-	border: #dbdbdb 2px solid;
+.button-save {
+	display: inline-block;
+	width: 192px;
+	border: #d9d9d9 2px solid;
+	border-bottom: #d9d9d9 4px solid;
 	border-radius: 8px;
 	background-color: #fff;
-	padding: 28px;
-	font-size: 30px;
+	padding: 16px 48px;
+	margin-right: 12px;
+	font-size: 28px;
 	font-weight: bold;
+	color: #818181;
+}
+
+.button-tell {
+	display: inline-block;
+	width: 216px;
+	border: #d9d9d9 2px solid;
+	border-bottom: #d9d9d9 4px solid;
+	border-radius: 8px;
+	background-color: #fff;
+	padding: 16px 30px;
+	margin-left: 12px;
+	font-size: 28px;
+	font-weight: 600;
 	color: #818181;
 }
 
@@ -234,7 +257,9 @@ p {
 p.why-give {
 	font-style: italic;
 	font-weight: lighter;
-	color: #00a2d1;
+	/* color: #00a2d1; */
+	color: #00b8e8;
+	margin-top: 18px;
 }
 
 .only-nudge {
@@ -255,20 +280,6 @@ p.why-give {
 	font-variant-numeric: lining-nums;
 }
 
-/* this pulls the lowercase number glyphs out of the font's set */
-
-.nums {
-    font-feature-settings: frac;
-}
-
-@supports (font-variant-numeric: diagonal-fractions) {
-  .nums {
-      font-feature-settings: frac;
-      font-variant-numeric: diagonal-fractions;
-  }
-}
-
-
 #pic {
 	text-align: center;
 	margin:auto;
@@ -282,6 +293,7 @@ p.why-give {
 
 /* Small ONLY */
 @media screen and (max-width: 39.9375em) {
+
 }
 
 
