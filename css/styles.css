@@ -34,13 +34,12 @@ html {
 body {
 	min-height: 100%; 
 	margin: 0 0 0 0;
-	display: flex;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-family: 'Oxygen', sans-serif;
 	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
 	font-family: Menlo,Monaco,Consolas,'Courier New',monospace;
 	font-family: 'rooney-sans', Avenir-Book, Calibri, 'Fira Sans', sans-serif;
-
+	/* base font set here - relative sizes in ems will be based on this value going forward */
 	font-size: 28px;
 	line-height: 150%;
 	/* here's a setting to help older browsers support oldstyle nums */
@@ -49,7 +48,7 @@ body {
 	font-variant-numeric: oldstyle-nums;
 	font-weight: lighter;
 	font-stretch: expanded;
-	letter-spacing: 1.2px; /* give this an em value somewhere between 1 and 2 px */
+	letter-spacing: 0.043em;
 	/* color: #828282; */
 	color: #9c9c9c;
 	/* background-color: #fff; */
@@ -64,7 +63,7 @@ body {
     }
 }
 
-/* SAVE FOR LINKS
+/* SAVE FOR FUTURE default body LINKS
 
 a:link {
 	text-decoration: none;
@@ -88,81 +87,110 @@ a:active {
 	border-bottom: #eee dotted 1px;
 } */
 
+
 /* =====================  START SECTION STYLES ==================== */
 
 
 #main {
-	max-width: 700px;
+	/* max-width: 608px; */
+	max-width: 21.714em;
 	background-color: #fff;
-	padding: 36px 46px 4px 46px;
+	/* padding: 36px 46px 4px 46px; */
+	padding: 1.286em 1.643em 0 1.643em;
 	margin: auto;
-	margin-top: 24px;
+	/* margin-top: 24px; */
+	margin-top: 0.857em;
 	/* margin-bottom: 12px; */
 	/* padding-top: 36px;
 	padding-bottom: 32px; */
 }
 
+
 /* inactive popover - created for the effect */
 #popover {
 	position: relative;
-	max-width: 548px;
+	/* max-width: 548px; */
+	max-width: 19.571em;
 	margin: auto;
-	border: #424242 2px solid;
-	border-radius: 6px;
+	/* border: #424242 2px solid; */
+	border: #424242 0.071em solid;
+	/* border-radius: 6px; */
+	border-radius: 0.214em;
  	background-color: #424242 !important;
-	padding: 24px;
+	/* padding: 24px; */
+	padding: 0.857em;
  	text-align: center;
 	color: #fff;
-	font-size: 30px;
+	/* font-size: 30px; */
+	font-size: 1.071em;
 }
 
 .popover-arrow {
 	position: absolute;
-	top: 92px;
-	left: 506px;
-	border-top: 18px solid #424242;
-	border-left: 13px solid transparent;
-	border-right: 13px solid transparent;
+	top: 92px; 
+	/* top: 3.286em; */
+	left: 506px; 
+	/* left: 18.071em; */
+	border-top: 22px solid #424242; 
+	/* border-top: 0.643em solid #424242; */
+	border-left: 16px solid transparent; 
+	/* border-left: 0.464em solid transparent; */
+	border-right: 16px solid transparent;
+	/* border-right: 0.464em solid transparent; */
  	width: 0;
  	height: 0;
  	/* -webkit-filter: drop-shadow(0 -2px 2px #AAA); */
 }
 
-
 #progress-bar {
-	max-width: 600px;
+	/* max-width: 600px; */
+	max-width: 21.429em;
 	border: #dadada 2px solid;
 	border-bottom: 0;
 	margin: auto;
-	margin-top: 24px;
+	/* margin-top: 24px; */
+	margin-top: 0.857em;
 }
 
 .progress-fill {
-	height:24px;
-	width:74.7%;
+	/* height: 24px; */
+	height: 0.857em;
+	width: 74.7%;
 	background-color: #f35d3f;
 }
 
+
+/*  this is the primary 'middle' section with the lt gray border */
+
 #inner-content {
-	max-width: 508px;
-	/* border: #dadada 2px solid; */
-	border: #d9d9d9 2px solid;
-	padding: 0 46px 10px 46px;
+	/* max-width: 508px; */
+	max-width: 18.143em;
+	border: #dadada 2px solid; 
+	/* padding: 0 46px 10px 46px; */
+	padding: 0 1.643em 0.357em 1.643em;
 	margin: 0 auto;
-	margin-bottom: 10px;
+	/* margin-bottom: 10px; */
+	margin-bottom: 0.357em;
 	/* -webkit-filter: drop-shadow(0 -2px 2px #AAA); */
 	/* box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4); */
 }
+
+/*  hiding the h1 for sighted readers, but including it behind the scenes per accessibility recommendations */
 
 .notshowing {
 	display: none;
 }
 
 p {
-	margin: 24px 2px;
+	/* margin: 24px 2px; */
+	margin: 0.857em 0.071em;
 }
 
 /* text-shadow: 0 1px 1px rgba(0,0,0,0.1) */
+
+
+
+/* +++++++++++++ BUTTON STYLES ++++++++++++++++ */
 
 #button-group_01 {
 	width: 100%;
@@ -170,26 +198,29 @@ p {
 	text-align: center;
 	display: block;
 	/* margin: 32px 46px 18px 46px; */
-	margin-top: 26px;
+	margin-top: 26px; 
+	/* margin-top: 0.929em; */
 	margin-left: 0;
 	padding-left: 0;
 	
 }
 
-
 .button1 {
 	display: inline-block;
-	width: 180px;
+	width: 180px; 
 	border: #d9d9d9 2px solid;
-	border-radius: 8px;
+	/* border-radius: 8px; */
+	border-radius: 0.286em;
 	background-color: #fff;
-	padding: 28px;
-	font-size: 34px;
+	padding: 28px; 
+	/* font-size: 34px; */
+	font-size: 1.214em;
 	font-weight: bold;
 	color: #818181;
 	text-align: left;
-	margin-right: 14px;
-	margin-left: -4px;
+	margin-right: 14px; 
+	/* margin-right: 0.5em; */
+	margin-left: -4px; 
 }
 
 .button1-grn {
@@ -197,13 +228,15 @@ p {
 	width: 180px;
 	border: #00b03f 2px solid;
 	border-bottom: #00b03f 4px solid;
-	border-radius: 8px;
+	border-radius: 0.286em;
 	background-color: #00bc43;
 	padding: 26px;
-	font-size: 34px;
+	/* font-size: 34px; */
+	font-size: 1.214em;
 	font-weight: 600;
 	font-stretch: expanded;
-	letter-spacing: 1.2px;
+	/* letter-spacing: 1.2px; */
+	letter-spacing: 0.043em;
 	color: #fff;
 	margin-left: 14px;
 	margin-right: -4px;
@@ -221,17 +254,16 @@ p {
 	justify-content: left;
 }
 
-
 .button-save {
 	display: inline-block;
 	width: 192px;
 	border: #d9d9d9 2px solid;
 	border-bottom: #d9d9d9 4px solid;
-	border-radius: 8px;
+	border-radius: 0.286em;
 	background-color: #fff;
 	padding: 16px 48px;
 	margin-right: 12px;
-	font-size: 28px;
+	font-size: 1em;
 	font-weight: bold;
 	color: #818181;
 }
@@ -241,26 +273,86 @@ p {
 	width: 216px;
 	border: #d9d9d9 2px solid;
 	border-bottom: #d9d9d9 4px solid;
-	border-radius: 8px;
+	border-radius: 0.286em;
 	background-color: #fff;
 	padding: 16px 30px;
 	margin-left: 12px;
-	font-size: 28px;
+	font-size: 1em;
 	font-weight: 600;
 	color: #818181;
 }
 
-.bolder {
-	font-weight: bold;
+/* +++++++++++++ ROLLOVER STYLES for .button-save and .button-tell links ++++++++++++++++ */
+
+.button-save, .button-tell a:link {
+	text-decoration: none;
+	color: #818181;
+	border: #d9d9d9 2px solid;
+	border-bottom: #d9d9d9 4px solid;
 }
+
+.button-save, .button-tell a:visited {
+	text-decoration: none;
+	color: #818181;
+	border: #d9d9d9 2px solid;
+	border-bottom: #d9d9d9 4px solid;
+}
+
+.button-save .button-tell a:hover {
+	text-decoration: none;
+	background-color: #f2f2f2;
+	color: #9c9c9c;
+	border: #e6e6e6 2px solid;
+	border-bottom: #e6e6e6 4px solid;
+}
+/*
+.button-save, .button-tell a:active {
+	text-decoration: none;
+	color: #696969;
+	border: #d9d9d9 2px solid;
+	border-bottom: #d9d9d9 4px solid;
+} */
+
+/* ===== END ROLLOVER STYLES for .button-save and .button-tell links ======== */
+
+
 
 p.why-give {
 	font-style: italic;
 	font-weight: lighter;
 	/* color: #00a2d1; */
 	color: #00b8e8;
-	margin-top: 18px;
+	/* margin-top: 18px; */
+	margin-top: 0.643em;
 }
+
+/* +++++++++++++ ROLLOVER STYLES for .why-give link ++++++++++++++++ */
+
+.why-give a:link {
+	text-decoration: none;
+	color: #00b8e8;
+}
+
+.why-give a:visited {
+	text-decoration: none;
+	color: #00b8e8;
+}
+
+.why-give a:hover {
+	text-decoration: none;
+	color: #1ad1ff;
+	border-bottom: #1ad1ff dotted 1px;
+}
+
+.why-give a:active {
+	text-decoration: none;
+	color: #00a3cc;
+	border-bottom: #00a3cc dotted 1px;
+} 
+
+/* ===== END ROLLOVER STYLES for .why-give link ======== */
+
+/* +++++++++++++ span styles ++++++++++++++++ */
 
 .only-nudge {
 	color: #f35d3f;
@@ -273,12 +365,27 @@ p.why-give {
 	font-variant-numeric: oldstyle-nums;
 }
 
+.bolder {
+	font-weight: bold;
+}
+
+.dollar-glyph {
+	color: #9c9c9c;
+	font-weight: 500;
+	font-family: arial, helvetica, sans-serif;
+}
+
 .dollar-qty {
 	color: #424242;
 	font-weight: bold;
-	font-family: sans-serif;
-	font-variant-numeric: lining-nums;
+	font-family: arial, helvetica, sans-serif;
+	font-variant-numeric: none;
+	/* font-size: 36px; */
+	font-size: 1.071em;
 }
+
+
+
 
 #pic {
 	text-align: center;
@@ -286,7 +393,7 @@ p.why-give {
 }
 
 
-/* ++++++++++++++  breakpoint styles ++++++++++++++++++++ */
+
 
 /* ==============   Custom Media Queries  ================  */
 
@@ -296,6 +403,24 @@ p.why-give {
 
 }
 
+
+/* Medium ONLY */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+
+}
+
+
+/* Medium and UP */
+@media screen and (min-width: 40em) {
+
+}
+
+
+/* Large and UP */
+@media screen and (min-width: 64em) {
+
+
+}
 
 
 
