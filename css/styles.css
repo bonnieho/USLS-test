@@ -135,6 +135,41 @@ a:active {
 	background-color: #f35d3f;
 }
 
+/* Tooltip container - from W3schools */
+.tooltip {
+	position: relative;
+} 
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+	visibility: hidden;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	color: #fff;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	background-color: #d82f0e;
+	color: #fff;
+	font-size: 0.5em;
+	font-style: italic;
+
+	/* Position the tooltip text - see examples below! */
+	position: absolute;
+	z-index: 1;
+}
+
+.tooltiptext {
+	line-height: 23px;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+}
+
 
 /*  this is the primary 'middle' section with the lt gray border */
 
@@ -207,6 +242,47 @@ p {
 	margin-right: -4px;
 }
 
+/* +++++++++++++ ROLLOVER STYLES for .button1-grn links ++++++++++++++++ */
+
+.button1-grn a:link {
+	text-decoration: none;
+	color: #fff;
+	border: #00b03f 2px solid;
+	border-bottom: #00b03f 4px solid;
+	border-radius: 0.286em;
+	background-color: #00bc43;
+}
+
+.button1-grn a:visited {
+	text-decoration: none;
+	color: #fff;
+	border: #00b03f 2px solid;
+	border-bottom: #00b03f 4px solid;
+	border-radius: 0.286em;
+	background-color: #00bc43;
+}
+
+.button1-grn:hover {
+	text-decoration: none;
+	color: #fff;
+	border: #00cc47 2px solid;
+	border-bottom: #00cc47 4px solid;
+	border-radius: 0.286em;
+	background-color: #00f054;
+	text-shadow: 0 2px 2px rgba(0,128,45,1.0)
+}
+
+.button1-grn:active {
+	text-decoration: none;
+	color: #fff;
+	border: #009936 2px solid;
+	border-bottom: #009936 4px solid;
+	border-radius: 0.286em;
+	background-color: #00a339;
+}
+
+/* ===== END ROLLOVER STYLES for .button1-grn link ======== */
+
 #button-group-02 {
 	width: 604px;
 	text-align: center;
@@ -249,34 +325,49 @@ p {
 
 /* +++++++++++++ ROLLOVER STYLES for .button-save and .button-tell links ++++++++++++++++ */
 
-.button-save, .button-tell a:link {
+.button-save .button-tell a:link {
 	text-decoration: none;
 	color: #818181;
 	border: #d9d9d9 2px solid;
 	border-bottom: #d9d9d9 4px solid;
 }
 
-.button-save, .button-tell a:visited {
+.button-save .button-tell a:visited {
 	text-decoration: none;
 	color: #818181;
 	border: #d9d9d9 2px solid;
 	border-bottom: #d9d9d9 4px solid;
 }
 
-.button-save .button-tell a:hover {
+.button-save:hover {
 	text-decoration: none;
 	background-color: #f2f2f2;
 	color: #9c9c9c;
 	border: #e6e6e6 2px solid;
 	border-bottom: #e6e6e6 4px solid;
 }
-/*
-.button-save, .button-tell a:active {
+
+.button-tell:hover {
+	text-decoration: none;
+	background-color: #f2f2f2;
+	color: #9c9c9c;
+	border: #e6e6e6 2px solid;
+	border-bottom: #e6e6e6 4px solid;
+}
+
+.button-tell:active {
 	text-decoration: none;
 	color: #696969;
 	border: #d9d9d9 2px solid;
 	border-bottom: #d9d9d9 4px solid;
-} */
+}
+
+.button-save:active {
+	text-decoration: none;
+	color: #696969;
+	border: #d9d9d9 2px solid;
+	border-bottom: #d9d9d9 4px solid;
+}
 
 /* ===== END ROLLOVER STYLES for .button-save and .button-tell links ======== */
 
@@ -287,7 +378,6 @@ p.why-give {
 	font-weight: lighter;
 	/* color: #00a2d1; */
 	color: #00b8e8;
-	/* margin-top: 18px; */
 	margin-top: 0.643em;
 }
 
@@ -382,7 +472,6 @@ p.why-give {
 		margin-bottom: 0.357em;
 	}
 
-
 	p.why-give {
 		text-align: center;
 		margin-top: 1em;
@@ -415,18 +504,15 @@ p.why-give {
 		max-width: 100%
 	}
 
-
 	.button-save {
 		display: inline-block;
-		width: 100%;
-		max-width: 85%;
+		width: 80%
 		margin-right: 0;
 		margin-bottom: 0.75em;
 	}
 
 	.button-tell {
-		width: 100%;
-		max-width: 92%;
+		width: 92%;
 		margin-left: 0;
 	}
 }
@@ -494,12 +580,11 @@ p.why-give {
 		margin-right: 0;
 		margin-left: 0;
 	}
-
 }
 
 
 /* Medium and UP */
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 320px) {
 
 }
 
@@ -507,14 +592,6 @@ p.why-give {
 /* Large and UP */
 @media screen and (min-width: 764px) {
 
-
 }
-
-
-
-
-
-
-
 
 
